@@ -15,3 +15,5 @@ steps:
     'push',
     'us-central1-docker.pkg.dev/quantum-toolbox-447808-t2/my-container-registry/digit-classifier-image'
   ]
+options:
+  logging: CLOUD_LOGGING_ONLY
