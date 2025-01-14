@@ -1,0 +1,17 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  id: 'Build container image'
+  args: [
+    'build',
+    '.',
+    '-t',
+    'us-central1-docker.pkg.dev/quantum-toolbox-447808-t2/my-container-registry/digit-classifier-image',
+    '-f',
+    'Dockerfile'
+  ]
+- name: 'gcr.io/cloud-builders/docker'
+  id: 'Push container image'
+  args: [
+    'push',
+    'us-central1-docker.pkg.dev/quantum-toolbox-447808-t2/my-container-registry/digit-classifier-image'
+  ]
